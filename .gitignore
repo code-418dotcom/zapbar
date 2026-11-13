@@ -1,0 +1,33 @@
+# Credentials
+# `.env` matches that one filename and nothing else, so a BACKUP beside it is
+# untracked but NOT ignored - one `git add -A` from committing a live secrets
+# file. Found 092026 in scorethisjob while removing dead keys.
+.env
+.env.local
+.env.production
+.env.*.local
+.env.bak*
+.env.backup*
+.env.*.bak
+.env.save
+
+# Claudify local
+CLAUDE.local.md
+.claude/logs/
+.claude/agent-memory/
+.claude/backups/
+
+# Common
+.DS_Store
+Thumbs.db
+*.log
+
+# Python bytecode. In the BASE block, not the python-stack one: the Claudify
+# hook proofs ship Python files to every project regardless of stack, and
+# running one leaves __pycache__ behind.
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+.superpowers/

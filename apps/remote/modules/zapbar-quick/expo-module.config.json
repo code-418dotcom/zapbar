@@ -1,0 +1,1 @@
+{"platforms":["android","apple"],"android":{"modules":["expo.modules.zapbarquick.ZapbarQuickModule"]},"apple":{"modules":["ZapbarQuickModule"]}}

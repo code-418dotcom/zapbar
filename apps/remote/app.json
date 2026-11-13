@@ -1,0 +1,79 @@
+{
+  "expo": {
+    "name": "Zapbar",
+    "slug": "zapbar",
+    "scheme": "zapbar",
+    "version": "1.3.1",
+    "orientation": "default",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "bundleIdentifier": "app.zapbar.remote",
+      "buildNumber": "10301",
+      "supportsTablet": false,
+      "appleTeamId": "AQBG4QHRNN",
+      "infoPlist": {
+        "NSLocalNetworkUsageDescription": "Zapbar needs to find and control your soundbar on your Wi-Fi.",
+        "NSBonjourServices": [
+          "_heos-audio._tcp"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "entitlements": {
+        "com.apple.security.application-groups": [
+          "group.zapbar.app"
+        ]
+      }
+    },
+    "android": {
+      "package": "app.zapbar.remote",
+      "adaptiveIcon": {
+        "backgroundColor": "#17301B",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "permissions": [
+        "ACCESS_NETWORK_STATE",
+        "ACCESS_WIFI_STATE",
+        "CHANGE_WIFI_MULTICAST_STATE"
+      ],
+      "blockedPermissions": [
+        "android.permission.SYSTEM_ALERT_WINDOW",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.VIBRATE"
+      ],
+      "versionCode": 10301,
+      "allowBackup": false
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true,
+            "enableMinifyInReleaseBuilds": true,
+            "enableShrinkResourcesInReleaseBuilds": true
+          }
+        }
+      ],
+      "expo-status-bar",
+      "expo-font",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 160,
+          "backgroundColor": "#17301B"
+        }
+      ],
+      "expo-iap",
+      "./plugins/with-release-signing",
+      "@bacons/apple-targets"
+    ]
+  }
+}

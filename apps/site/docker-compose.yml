@@ -1,0 +1,7 @@
+services:
+  zapbar-site:
+    build: .
+    container_name: zapbar-site
+    restart: unless-stopped
+    ports:
+      - "${HOST_IP}:${PORT}:80"

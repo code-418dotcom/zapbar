@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="0dp" android:layout_weight="1" android:layout_height="48dp" android:orientation="horizontal">
+  <FrameLayout android:id="@+id/zq_seg_0" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_start" />
+  <FrameLayout android:id="@+id/zq_seg_1" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_2" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_3" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_4" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_5" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_6" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_7" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_8" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_9" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_10" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_11" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_12" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_13" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_14" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_15" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_16" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_17" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_18" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_mid" />
+  <FrameLayout android:id="@+id/zq_seg_19" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:background="@drawable/zq_seg_track_end" />
+</LinearLayout>

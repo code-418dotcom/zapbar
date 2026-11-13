@@ -1,0 +1,4 @@
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+  android:minWidth="250dp" android:minHeight="40dp" android:targetCellWidth="4" android:targetCellHeight="1"
+  android:resizeMode="horizontal" android:updatePeriodMillis="0" android:widgetCategory="home_screen"
+  android:initialLayout="@layout/zq_widget_small" android:previewLayout="@layout/zq_widget_small" android:description="@string/zq_widget_small" />

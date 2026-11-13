@@ -1,0 +1,7 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/zq_root" android:layout_width="match_parent" android:layout_height="match_parent"
+  android:orientation="horizontal" android:gravity="center_vertical" android:padding="8dp" android:background="@drawable/zq_bg_widget">
+  <ImageView android:layout_width="20dp" android:layout_height="20dp" android:layout_marginHorizontal="4dp" android:src="@drawable/zq_ic_z" android:tint="@color/zq_accent" />
+  <ImageView android:id="@+id/zq_mute" android:layout_width="44dp" android:layout_height="44dp" android:padding="10dp" android:background="@drawable/zq_bg_round" android:src="@drawable/zq_ic_volume_high" android:tint="@color/zq_text" android:contentDescription="@string/zq_mute" />
+  <include layout="@layout/zq_pill" android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1" android:layout_marginStart="6dp" />
+  <TextView android:id="@+id/zq_volume" android:layout_width="44dp" android:layout_height="44dp" android:gravity="center" android:textColor="@color/zq_text" android:textSize="18sp" android:textStyle="bold" android:fontFamily="sans-serif-medium" />
+</LinearLayout>

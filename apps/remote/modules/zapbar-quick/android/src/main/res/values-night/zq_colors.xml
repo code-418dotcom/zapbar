@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="zq_bg">#17301B</color>
+  <color name="zq_surface">#21402A</color>
+  <color name="zq_surface_hi">#2C4F33</color>
+  <color name="zq_text">#F4F6EE</color>
+  <color name="zq_muted">#A9B8A0</color>
+  <color name="zq_accent">#C8F552</color>
+  <color name="zq_on_accent">#17301B</color>
+  <color name="zq_warn">#F5C451</color>
+</resources>

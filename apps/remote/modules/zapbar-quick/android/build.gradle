@@ -1,0 +1,24 @@
+plugins {
+  id 'com.android.library'
+  id 'expo-module-gradle-plugin'
+}
+
+group = 'expo.modules.zapbarquick'
+version = '0.1.0'
+
+android {
+  namespace "expo.modules.zapbarquick"
+  defaultConfig {
+    versionCode 1
+    versionName "0.1.0"
+  }
+  lintOptions {
+    abortOnError false
+  }
+}
+dependencies {
+  implementation "androidx.media:media:1.7.0"
+  implementation "androidx.core:core-ktx:1.13.1"
+  testImplementation "junit:junit:4.13.2"
+  testImplementation "org.json:json:20240303"
+}

@@ -1,0 +1,91 @@
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 500; font-display: swap; src: url(/fonts/plus-jakarta-sans-500.woff2) format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 700; font-display: swap; src: url(/fonts/plus-jakarta-sans-700.woff2) format('woff2'); }
+@font-face { font-family: 'Plus Jakarta Sans'; font-weight: 800; font-display: swap; src: url(/fonts/plus-jakarta-sans-800.woff2) format('woff2'); }
+
+/* Brand palette from apps/remote/src/theme.ts. Light by default, dark follows the system. */
+:root {
+  --bg: #F3F6EC;
+  --surface: #FFFFFF;
+  --surface-hi: #E3EAD7;
+  --text: #17301B;
+  --muted: #5E7360;
+  --accent: #17301B;
+  --on-accent: #C8F552;
+  --border: #D5DDC8;
+  color-scheme: light dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17301B;
+    --surface: #21402A;
+    --surface-hi: #2C4F33;
+    --text: #F4F6EE;
+    --muted: #A9B8A0;
+    --accent: #C8F552;
+    --on-accent: #17301B;
+    --border: #2C4F33;
+  }
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 500 17px/1.6 'Plus Jakarta Sans', system-ui, sans-serif;
+  overflow-x: clip; /* the full-bleed strip is 100vw, which includes the scrollbar */
+}
+main, header, footer { max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+/* Text pages (privacy, support) keep a readable measure; the home page uses the full width. */
+main > p, main > dl, main > .card:not(.free), main > h1:first-child { max-width: 720px; }
+header { display: flex; align-items: center; gap: 12px; padding-top: 24px; }
+header a { display: flex; align-items: center; gap: 12px; color: var(--text); text-decoration: none; font-weight: 800; font-size: 20px; }
+header img { width: 36px; height: 36px; }
+h1 { font-weight: 800; font-size: clamp(32px, 8vw, 48px); line-height: 1.1; margin: 40px 0 12px; }
+h2 { font-weight: 800; font-size: 22px; margin: 40px 0 8px; }
+p, li { color: var(--text); }
+.lead { font-size: 20px; color: var(--muted); margin: 0 0 24px; max-width: 560px; }
+a { color: inherit; text-underline-offset: 3px; }
+.badges { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.badges img { display: block; height: 56px; width: auto; }
+
+/* Hero: text only on phones; text beside two overlapping screenshots on wide screens. */
+.hero-art { display: none; }
+@media (min-width: 900px) {
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 48px; min-height: 560px; }
+  .hero h1 { font-size: clamp(48px, 5vw, 64px); margin-top: 0; }
+  .lead { font-size: 22px; }
+  .hero-art { display: block; position: relative; height: 560px; }
+  .hero-art img { position: absolute; width: 250px; height: auto; border-radius: 28px; border: 1px solid var(--border); background: var(--surface); box-shadow: 0 24px 60px rgb(0 0 0 / .18); }
+  .hero-art .back { right: 8px; top: 0; transform: rotate(6deg); }
+  .hero-art .front { right: 190px; top: 40px; transform: rotate(-4deg); }
+}
+
+/* Screenshot strip: full-bleed, scrolls by itself (CSS only, no script), pauses on hover. Two identical sets make the loop seamless. */
+.strip {
+  width: 100vw; margin: 48px 0 8px calc(50% - 50vw); overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+}
+.track { display: flex; width: max-content; animation: drift 70s linear infinite; }
+.strip:hover .track { animation-play-state: paused; }
+.set { display: flex; align-items: center; }
+.set img { flex: 0 0 auto; width: clamp(160px, 18vw, 240px); height: auto; margin-right: 16px; border-radius: 18px; border: 1px solid var(--border); background: var(--surface); }
+.set img.wide { width: clamp(320px, 36vw, 480px); }
+@keyframes drift { to { transform: translateX(-50%); } }
+@media (prefers-reduced-motion: reduce) {
+  .strip { overflow-x: auto; -webkit-mask-image: none; mask-image: none; scroll-snap-type: x mandatory; }
+  .track { animation: none; padding: 0 16px; }
+  .set[aria-hidden] { display: none; }
+  .set img { scroll-snap-align: start; }
+}
+
+.features { list-style: none; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.features li { background: var(--surface); border-radius: 18px; padding: 16px 20px; }
+.free { margin-top: 40px; padding: 8px 24px 16px; }
+.free h2 { margin-top: 16px; }
+.card { background: var(--surface); border-radius: 24px; padding: 8px 20px; }
+dt { font-weight: 700; margin-top: 16px; }
+dd { margin: 4px 0 16px; color: var(--muted); }
+footer { margin-top: 64px; padding-bottom: 40px; color: var(--muted); font-size: 14px; display: flex; flex-wrap: wrap; gap: 8px 20px; }

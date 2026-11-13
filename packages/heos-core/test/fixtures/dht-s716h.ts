@@ -1,0 +1,6 @@
+// Recorded 2026-10-16 from a DHT-S716H, firmware 3.139.170. TvConfig trimmed of most irCode* fields.
+export const AUDIO_CONFIG_XML =
+  '<AudioConfig><highpass>0</highpass><lowpass>80</lowpass><subwooferEnable>0</subwooferEnable><outputMode>STEREO</outputMode><ampBridged>0</ampBridged><soundMode>MOVIE_NORMAL</soundMode><impedance></impedance><ampPower>1</ampPower><availableSoundModes>MUSIC_NORMAL,MOVIE_NORMAL</availableSoundModes><sourceDirect>0</sourceDirect><bassBoost>0</bassBoost><speakerOption></speakerOption><toneControlOption></toneControlOption><tilt>0</tilt><phase>0</phase></AudioConfig>';
+
+export const TV_CONFIG_XML =
+  '<TvConfig><input>HDMI-ARC</input><connectedInputs>HDMI-ARC-CEC-AUDIO-ARC</connectedInputs><hdmiVolume>0</hdmiVolume><hdmiConnection>ARC</hdmiConnection><remoteVolume>0</remoteVolume><autoPlay>0</autoPlay><irFlasherFeedback>1</irFlasherFeedback><allowZoning>0</allowZoning><dialogueEnhance>2<level>2</level><enabled>1</enabled></dialogueEnhance><nightMode>0<level>0</level><enabled>1</enabled></nightMode><audioDelay>0</audioDelay><syncMode>VIDEO</syncMode><bilingualMode>MAIN_VOICE</bilingualMode><irCodeVolPlus>1</irCodeVolPlus><irCodeHdmi1>1</irCodeHdmi1></TvConfig>';
